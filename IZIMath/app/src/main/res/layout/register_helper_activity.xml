@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="556dp"
+        android:layout_marginTop="468dp"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/salsafamilyfont"
         android:text="Acepto los términos y condiciones."
@@ -38,56 +38,56 @@
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="192dp"
         android:ems="10"
         android:fontFamily="@font/salsafamilyfont"
-        android:text="Correo electrónico"
+        android:hint="Correo electrónico"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
-        android:fontFamily="@font/salsafamilyfont"
         android:id="@+id/repassHR_et"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="320dp"
         android:ems="10"
-        android:text="Confirmar Contraseña"
+        android:fontFamily="@font/salsafamilyfont"
+        android:hint="Confirmar Contraseña"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:fontFamily="@font/salsafamilyfont"
         android:id="@+id/passHR_et"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="256dp"
         android:ems="10"
-        android:text="Contraseña"
+        android:fontFamily="@font/salsafamilyfont"
+        android:hint="Contraseña"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:fontFamily="@font/salsafamilyfont"
         android:id="@+id/userHR_et"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="124dp"
         android:ems="10"
-        android:text="Usuario"
+        android:fontFamily="@font/salsafamilyfont"
+        android:hint="Usuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <Button
         android:id="@+id/registerHR_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="216dp"
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="528dp"
         android:fontFamily="@font/salsafamilyfont"
         android:text="Registrarse"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +97,7 @@
         android:id="@+id/backHR_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="528dp"
         android:layout_marginEnd="224dp"
         android:fontFamily="@font/salsafamilyfont"
         android:text="Atras"
@@ -109,10 +109,9 @@
         android:layout_width="279dp"
         android:layout_height="56dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="472dp"
+        android:layout_marginTop="384dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

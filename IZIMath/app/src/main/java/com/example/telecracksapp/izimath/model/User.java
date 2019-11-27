@@ -2,26 +2,22 @@ package com.example.telecracksapp.izimath.model;
 
 public class User {
 
-    public final static String HELPER = "HELPER";
-    public final static String USER = "USER";
-
     private String uid;
-    private String name;
+
     private String email;
-    private String userType;
+    private String username;
+
     private String password;
-    private String specialty;
+
 
     public User() {
     }
 
-    public User(String uid, String name, String email, String userType, String password, String specialty) {
+    public User(String uid, String email, String username, String password) {
         this.uid = uid;
-        this.name = name;
         this.email = email;
-        this.userType = userType;
+        this.username = username;
         this.password = password;
-        this.specialty = specialty;
     }
 
     public String getUid() {
@@ -32,13 +28,6 @@ public class User {
         this.uid = uid;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;
@@ -48,12 +37,12 @@ public class User {
         this.email = email;
     }
 
-    public String getUserType() {
-        return userType;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserType(String userType) {
-        this.userType = userType;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
 
@@ -63,13 +52,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getSpecialty() {
-        return specialty;
-    }
-
-    public void setSpecialty(String specialty) {
-        this.specialty = specialty;
     }
 }

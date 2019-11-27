@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.telecracksapp.izimath.model.User;
+import com.example.telecracksapp.izimath.model.Helper;
 
 public class RegisterOptionsActivity  extends AppCompatActivity {
 
@@ -36,7 +36,7 @@ public class RegisterOptionsActivity  extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent i = new Intent(RegisterOptionsActivity.this, RegisterUserActivity.class);
-                i.putExtra("userType", User.USER);
+                i.putExtra("userType", Helper.USER);
                 startActivity(i);
                 finish();
             }
@@ -46,7 +46,7 @@ public class RegisterOptionsActivity  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(RegisterOptionsActivity.this, RegisterHelperActivity.class);
-                i.putExtra("userType", User.HELPER);
+                i.putExtra("userType", Helper.HELPER);
                 startActivity(i);
                 finish();
             }

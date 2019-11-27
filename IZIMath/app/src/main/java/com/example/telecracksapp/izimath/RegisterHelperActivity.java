@@ -12,16 +12,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.telecracksapp.izimath.model.User;
+import com.example.telecracksapp.izimath.model.Helper;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 
 public class RegisterHelperActivity extends AppCompatActivity {
@@ -50,7 +46,7 @@ public class RegisterHelperActivity extends AppCompatActivity {
 
         checkBoxConditions = findViewById(R.id.checkBoxHR_cbx);
         //dictamina si se estan aceptando las condiciones
-        boolean chuleado = checkBoxConditions.isChecked();
+        final boolean chuleado = checkBoxConditions.isChecked();
 
         userEt = findViewById(R.id.userHR_et);
         emailEt = findViewById(R.id.emailHR_et);
@@ -86,8 +82,13 @@ public class RegisterHelperActivity extends AppCompatActivity {
                     return;
                 }
 
-                if (passwordEt.getText().toString().trim().length() < 10) {
-                    Toast.makeText(RegisterHelperActivity.this, "Las contraseñas debe tener mínimo 10 carácteres", Toast.LENGTH_LONG).show();
+                if (passwordEt.getText().toString().trim().length() < 6) {
+                    Toast.makeText(RegisterHelperActivity.this, "Las contraseñas debe tener mínimo 6 carácteres", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if(!checkBoxConditions.isChecked()){
+                    Toast.makeText(RegisterHelperActivity.this, "Debe aceptar las condiciones", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -107,7 +108,7 @@ public class RegisterHelperActivity extends AppCompatActivity {
 
                                String userType = "" + getIntent().getExtras().getSerializable("userType");;
 
-                                User user = new User(
+                                Helper user = new Helper(
                                         auth.getCurrentUser().getUid(),
                                         userEt.getText().toString(),
                                         emailEt.getText().toString(),
@@ -116,21 +117,9 @@ public class RegisterHelperActivity extends AppCompatActivity {
                                         especialidad
                                 );
 
-                                db.getReference().child("users").child(user.getUid())
+                                db.getReference().child("helpers").child(user.getUid())
                                         .setValue(user);
 
-                               // Friend friend = new Friend(
-
-                                      //  user.getUid(),
-                                   //     user.getName(),
-                                  //      user.getUsername(),
-                                     //   user.getPhone(),
-                                    //    user.getEmail()
-
-                            //    );
-                              //  db.getReference().child("friends")
-                                      //  .child(friend.getUid())
-                                      //  .setValue(friend);
 
 
                                 Intent i = new Intent(RegisterHelperActivity.this, PrincipalActivity.class);
