@@ -136,7 +136,7 @@ public class RegisterHelperActivity extends AppCompatActivity {
                 });
 
 
-              //  Intent i = new Intent(RegisterHelperActivity.this, PrincipalActivity.class);
+              //  Intent i = new Intent(aRegisterHelperActivity.this, aPrincipalActivity.class);
              //   startActivity(i);
             }
         });

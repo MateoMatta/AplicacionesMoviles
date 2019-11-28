@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".CourseTopicsActivity"></activity>
-        <activity android:name=".control.QuestionsAndAnswersActivity" />
+        <activity android:name=".AreaPost"></activity>
+        <activity android:name=".control.QuestionsActivity" />
         <activity android:name=".NewPost" />
         <activity android:name=".PrincipalActivity" />
         <activity android:name=".RegisterHelperActivity" />

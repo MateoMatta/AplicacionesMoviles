@@ -44,9 +44,9 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(PrincipalActivity.this, CourseTopicsActivity.class);
+                Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
                 startActivity(i);
-                //PONER ACCION---------------------------------------------
+                //PONER ACCION------------------------------------------------------------------------------------------
             }
         });
 
