@@ -28,7 +28,7 @@ public class NewPost extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_post);
-
+//fgff
 
         titulo = findViewById(R.id.titulo_et_new_post);
         db = FirebaseDatabase.getInstance();
