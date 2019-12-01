@@ -1,11 +1,20 @@
 package edu.co.icesi.appmoviles.proyectofinal;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import edu.co.icesi.appmoviles.proyectofinal.control.BurgerMenu;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -19,26 +28,25 @@ public class PrincipalActivity extends AppCompatActivity {
     private ImageButton geometriaBtn;
     private ImageButton ecuacionesDiferencialesBtn;
 
+
+    BurgerMenu fragment;
+    FragmentTransaction ft;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        searchBtn = findViewById(R.id.search_button);
+
+        searchBtn = findViewById(R.id.search_button_principal);
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(PrincipalActivity.this,SearchActivity.class);
+                Intent i = new Intent(PrincipalActivity.this, SearchActivity.class);
                 startActivity(i);
             }
         });
-        burgerMenuBtn = findViewById(R.id.burger_menu_button_principal);
-        burgerMenuBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-              //  Intent i = new Intent(PrincipalActivity.this,);
-            }
-        });
+
 
         calculoBtn = findViewById(R.id.imageButton_Calculo);
         calculoBtn.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +54,7 @@ public class PrincipalActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo","calculo");
+                i.putExtra("tipo", "calculo");
                 startActivity(i);
                 //PONER ACCION------------------------------------------------------------------------------------------
             }
@@ -57,7 +65,7 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo","algebra");
+                i.putExtra("tipo", "algebra");
                 startActivity(i);
 
                 //PONER ACCION---------------------------------------------
@@ -68,7 +76,7 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo","algebraLineal");
+                i.putExtra("tipo", "algebraLineal");
                 startActivity(i);
                 //PONER ACCION---------------------------------------------
             }
@@ -79,7 +87,7 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo","calculoVarias");
+                i.putExtra("tipo", "calculoVarias");
                 startActivity(i);
                 //PONER ACCION---------------------------------------------
             }
@@ -90,7 +98,7 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo","geometria");
+                i.putExtra("tipo", "geometria");
                 startActivity(i);
                 //PONER ACCION---------------------------------------------
             }
@@ -101,13 +109,50 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo","ecuaciones");
+                i.putExtra("tipo", "ecuaciones");
                 startActivity(i);
                 //PONER ACCION---------------------------------------------
             }
         });
 
+        burgerMenuBtn = findViewById(R.id.burger_menu_button_principal);
+        burgerMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent showContent = new Intent(getApplicationContext(),
+                        BurgerMenu.class);
+                startActivity(showContent);
+      //          fragment = new BurgerMenu();
 
 
+
+  //              ft = getSupportFragmentManager().beginTransaction();
+// Replace the contents of the container with the new fragment
+//                // ft.addToBackStack("sisa");
+// or ft.add(R.id.your_placeholder, new FooFragment());
+// Complete the changes added above
+    //            ft.commit();
+
+                //   ft.show(fragment);
+
+            }
+
+        });
+
+
+        //if (fragment != null) {
+
+          //  ImageButton imgBtn = fragment.getBackBtn();
+
+            //imgBtn.setOnClickListener(new View.OnClickListener() {
+              //  @Override
+                //public void onClick(View v) {
+                 //   Toast.makeText(v.getContext(), "sisa", Toast.LENGTH_SHORT).show();
+                   // ft.replace(R.id.scroll, fragment);
+                //}
+            //});
+
+    //    }
     }
 }

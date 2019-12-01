@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "824282361897-v3b1l7eecvs1nh4jdfk3cev2kddrh8dq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.co.icesi.appmoviles.proyectofinal",
+            "certificate_hash": "75b9d98178792d865aad55592308231e5334d3e9"
+          }
+        },
+        {
           "client_id": "824282361897-d5trah9r6q7lh3j3kbddmp89v3fv1r95.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
