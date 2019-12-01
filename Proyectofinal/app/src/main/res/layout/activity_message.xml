@@ -51,6 +51,7 @@
             android:textColor="#FFFFFFFF"
             android:textColorHint="#D5D5D5">
         </TextView>
+
         <ImageButton
             android:id="@+id/burger_menu_button_questions"
             android:layout_width="40dp"

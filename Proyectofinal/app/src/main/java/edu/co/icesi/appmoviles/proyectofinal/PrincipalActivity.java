@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import edu.co.icesi.appmoviles.proyectofinal.control.BurgerMenu;
@@ -27,7 +28,7 @@ public class PrincipalActivity extends AppCompatActivity {
     private ImageButton calculoMultivariableBtn;
     private ImageButton geometriaBtn;
     private ImageButton ecuacionesDiferencialesBtn;
-
+    AppCompatActivity ref;
 
     BurgerMenu fragment;
     FragmentTransaction ft;
@@ -37,6 +38,7 @@ public class PrincipalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
+         ref = (AppCompatActivity) PrincipalActivity.this;
 
         searchBtn = findViewById(R.id.search_button_principal);
         searchBtn.setOnClickListener(new View.OnClickListener() {
@@ -119,10 +121,8 @@ public class PrincipalActivity extends AppCompatActivity {
         burgerMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent showContent = new Intent(getApplicationContext(),
-                        BurgerMenu.class);
-                startActivity(showContent);
+                BurgerMenu fragment = new BurgerMenu();
+                fragment.show(ref.getSupportFragmentManager(), "ccc");
             }
         });
     }

@@ -5,5 +5,4 @@
     android:padding="10sp"
     android:textSize="24sp"
     android:textColor="#DFDDDD"
-
     xmlns:android="http://schemas.android.com/apk/res/android" />

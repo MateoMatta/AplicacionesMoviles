@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frame"
@@ -15,11 +15,25 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/questions_tv_burger"
+            android:layout_width="213dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="56dp"
+            android:fontFamily="@font/salsafamilyfont"
+            android:text="Mis preguntas"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
             android:id="@+id/user_tv_burger"
             android:layout_width="92dp"
             android:layout_height="0dp"
-            android:layout_marginTop="88dp"
-            android:layout_marginEnd="64dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="112dp"
             android:fontFamily="@font/salsafamilyfont"
             android:text="User"
             android:textAlignment="center"
@@ -30,10 +44,10 @@
 
         <TextView
             android:id="@+id/settings_tv_burger"
-            android:layout_width="91dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="144dp"
-            android:layout_marginEnd="64dp"
+            android:layout_width="97dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="112dp"
             android:fontFamily="@font/salsafamilyfont"
             android:text="Ajustes"
             android:textAlignment="center"
@@ -43,13 +57,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/questions_tv_burger"
-            android:layout_width="213dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="272dp"
-            android:layout_marginEnd="96dp"
+            android:id="@+id/message_tv_burger"
+            android:layout_width="208dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="56dp"
             android:fontFamily="@font/salsafamilyfont"
-            android:text="Mis preguntas"
+            android:text="Mensajes"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30dp"
@@ -60,8 +74,8 @@
             android:id="@+id/exit_tv_burger"
             android:layout_width="92dp"
             android:layout_height="0dp"
-            android:layout_marginTop="508dp"
-            android:layout_marginEnd="156dp"
+            android:layout_marginTop="284dp"
+            android:layout_marginEnd="112dp"
             android:fontFamily="@font/salsafamilyfont"
             android:text="Salir"
             android:textAlignment="center"
@@ -74,8 +88,8 @@
             android:id="@+id/help_tv_burger"
             android:layout_width="92dp"
             android:layout_height="0dp"
-            android:layout_marginTop="428dp"
-            android:layout_marginEnd="156dp"
+            android:layout_marginTop="232dp"
+            android:layout_marginEnd="112dp"
             android:fontFamily="@font/salsafamilyfont"
             android:text="Ayuda"
             android:textAlignment="center"
@@ -84,29 +98,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/message_tv_burger"
-            android:layout_width="208dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="356dp"
-            android:layout_marginEnd="100dp"
-            android:fontFamily="@font/salsafamilyfont"
-            android:text="Mensajes"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/imageButton_back2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="24dp"
-            android:src="@android:drawable/ic_menu_revert"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+</LinearLayout>

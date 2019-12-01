@@ -23,31 +23,17 @@ public class QuestionsActivity extends AppCompatActivity {
     private ListView questionsListview;
     private ArrayList<QuestionAndAnswer> questions;
     private ArrayAdapter<QuestionAndAnswer> adapterQuestions;
-
-
     private QuestionAndAnswer question;
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
-
-
-
         db = FirebaseDatabase.getInstance();
-
-
-
-
-
-
-
-        adapterQuestions = new ArrayAdapter<>(QuestionsActivity.this,
-                android.R.layout.simple_list_item_1,questions);
+        questionsListview = findViewById(R.id.List_View_myQuestions);
+        adapterQuestions = new ArrayAdapter<>(QuestionsActivity.this, android.R.layout.simple_list_item_1,questions);
         questionsListview.setAdapter(adapterQuestions);
-
         db.getReference().child("questions").child(question.getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
@@ -59,7 +45,6 @@ public class QuestionsActivity extends AppCompatActivity {
                         }
                         adapterQuestions.notifyDataSetChanged();
                     }
-
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 

@@ -47,10 +47,11 @@ public class NewPost extends AppCompatActivity {
 
                 //
                 //Sacar el texto
-                String text = "uy mano";
+                String theQuestion = titulo.getText().toString();
+                String answer = texto.getText().toString();
 
 
-                QuestionAndAnswer comment = new QuestionAndAnswer(uid, text, "");
+                QuestionAndAnswer comment = new QuestionAndAnswer(uid, theQuestion, "");
                 db.getReference()
                         .child("questions")
                         .child(comment.getUid())
