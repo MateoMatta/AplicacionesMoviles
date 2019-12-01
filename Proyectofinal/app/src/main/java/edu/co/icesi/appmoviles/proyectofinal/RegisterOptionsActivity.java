@@ -13,6 +13,8 @@ import edu.co.icesi.appmoviles.proyectofinal.model.*;
 public class RegisterOptionsActivity  extends AppCompatActivity {
 
 
+
+
     private Button usuario_bt;
     private Button colaborador_bt;
     private Button atras_bt;
