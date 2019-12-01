@@ -23,9 +23,9 @@ public class RegisterOptionsActivity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_options_activity);
-        usuario_bt = findViewById(R.id.userB_bt);
-        colaborador_bt = findViewById(R.id.helperB_bt);
-        atras_bt = findViewById(R.id.backOption_bt);
+        usuario_bt = findViewById(R.id.userB_bt_options);
+        colaborador_bt = findViewById(R.id.helperB_bt_options);
+        atras_bt = findViewById(R.id.backOption_bt_options);
 
 
         atras_bt.setOnClickListener(new View.OnClickListener() {

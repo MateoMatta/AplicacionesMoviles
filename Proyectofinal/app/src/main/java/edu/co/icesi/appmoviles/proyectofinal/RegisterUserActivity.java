@@ -44,7 +44,7 @@ public class RegisterUserActivity extends AppCompatActivity {
         correo = findViewById(R.id.emailUR_et);
         password_et = findViewById(R.id.passUR_et);
         repass_et = findViewById(R.id.repassUR_et);
-        checkUser = findViewById(R.id.checkBoxUser);
+        checkUser = findViewById(R.id.checkBoxUser_userRegister);
 
         atrasBtn = findViewById(R.id.backUR_btn);
         registrarseBtn = findViewById(R.id.registerUR_btn);

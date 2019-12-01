@@ -28,14 +28,15 @@ public class PrincipalActivity extends AppCompatActivity {
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //PONER ACCION---------------------------------------------
+                Intent i = new Intent(PrincipalActivity.this,SearchActivity.class);
+                startActivity(i);
             }
         });
-        burgerMenuBtn = findViewById(R.id.burger_menu_button);
+        burgerMenuBtn = findViewById(R.id.burger_menu_button_principal);
         burgerMenuBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //PONER ACCION---------------------------------------------
+              //  Intent i = new Intent(PrincipalActivity.this,);
             }
         });
 
@@ -45,6 +46,7 @@ public class PrincipalActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
+                i.putExtra("tipo","calculo");
                 startActivity(i);
                 //PONER ACCION------------------------------------------------------------------------------------------
             }
@@ -54,6 +56,10 @@ public class PrincipalActivity extends AppCompatActivity {
         algebraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
+                i.putExtra("tipo","algebra");
+                startActivity(i);
+
                 //PONER ACCION---------------------------------------------
             }
         });
@@ -61,6 +67,9 @@ public class PrincipalActivity extends AppCompatActivity {
         algebraLinealBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
+                i.putExtra("tipo","algebraLineal");
+                startActivity(i);
                 //PONER ACCION---------------------------------------------
             }
         });
@@ -69,6 +78,9 @@ public class PrincipalActivity extends AppCompatActivity {
         calculoMultivariableBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
+                i.putExtra("tipo","calculoVarias");
+                startActivity(i);
                 //PONER ACCION---------------------------------------------
             }
         });
@@ -77,6 +89,9 @@ public class PrincipalActivity extends AppCompatActivity {
         geometriaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
+                i.putExtra("tipo","geometria");
+                startActivity(i);
                 //PONER ACCION---------------------------------------------
             }
         });
@@ -85,6 +100,9 @@ public class PrincipalActivity extends AppCompatActivity {
         ecuacionesDiferencialesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
+                i.putExtra("tipo","ecuaciones");
+                startActivity(i);
                 //PONER ACCION---------------------------------------------
             }
         });

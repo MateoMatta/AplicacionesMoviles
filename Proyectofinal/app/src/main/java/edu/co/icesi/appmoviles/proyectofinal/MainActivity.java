@@ -97,11 +97,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        olvida_tv = findViewById(R.id.olvida_tv);
-        registra_tv = findViewById(R.id.registrar_tv);
-        usuario_et = findViewById(R.id.user_et);
-        password_et = findViewById(R.id.password_et);
-        inicia_bt = findViewById(R.id.inicia_bt);
+        olvida_tv = findViewById(R.id.olvida_tv_login);
+        registra_tv = findViewById(R.id.registrar_tv_login);
+        usuario_et = findViewById(R.id.user_et_login);
+        password_et = findViewById(R.id.password_et_login);
+        inicia_bt = findViewById(R.id.inicia_bt_login);
 
         inicia_bt.setOnClickListener(new View.OnClickListener() {
             @Override

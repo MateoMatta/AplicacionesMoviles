@@ -20,18 +20,35 @@ public class AreaPost extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area_post);
-
+        listViewTopics = findViewById(R.id.listview_topics_areaPost);
         topicsNames = new ArrayList<>();
-        topicsNames.add("EigenValores y Vectores");
-        topicsNames.add("¿Cómo multiplicar vectores y matrices?");
-        topicsNames.add("¿Qué es un plano tangente?");
-        topicsNames.add("¿Qué es la matriz identidad?");
-        topicsNames.add("¿Qué es una transformación lineal?");
+        Bundle extras = getIntent().getExtras();
+        String key =extras.getString("tipo ");
+        if(key.equals("algebra")){
 
+            //RECORRIDO FIREBASE ALGEBRA
 
-        listViewTopics = findViewById(R.id.listview_topics);
+        }if(key.equals("algebraLineal")){
 
+            //RECORRIDO FIREBASE ALGEBRA LINEAL
 
+        }if(key.equals("calculo")){
+
+            //RECORRIDO FIREBASE CALCULO
+
+        }if(key.equals("calculoVarias")){
+
+            //RECORRIDO FIREBASE CALCULO VARIAS
+
+        }if(key.equals("ecuaciones")){
+
+            //RECORRIDO FIREBASE ECUACIONES
+
+        }if(key.equals("geomettia")){
+
+            //RECORRIDO FIREBASE GEOMETRIA
+
+        }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.listview_topic_item, topicsNames);
         listViewTopics.setAdapter(adapter);
