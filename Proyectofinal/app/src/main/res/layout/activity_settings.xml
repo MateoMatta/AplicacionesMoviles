@@ -30,7 +30,7 @@
 
 
         <TextView
-            android:id="@+id/area_et"
+            android:id="@+id/area_et_settings"
             android:layout_width="260dp"
             android:layout_height="43dp"
             android:layout_marginStart="10dp"
@@ -44,6 +44,7 @@
         </TextView>
 
         <ImageButton
+            android:id="@+id/burger_menu_button_settings"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="0dp"
@@ -57,7 +58,7 @@
 
 
     <EditText
-        android:id="@+id/newPass_et"
+        android:id="@+id/newPass_et_settings"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_marginStart="68dp"
@@ -82,7 +83,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
-        android:id="@+id/pass_et"
+        android:id="@+id/pass_et_settings"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_marginStart="68dp"
@@ -97,7 +98,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/repassHR_et"
+        android:id="@+id/repass_et_settings"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_marginStart="68dp"
@@ -112,7 +113,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/emailNew_et"
+        android:id="@+id/emailNew_et_settings"
         android:layout_width="275dp"
         android:layout_height="55dp"
         android:layout_marginStart="68dp"

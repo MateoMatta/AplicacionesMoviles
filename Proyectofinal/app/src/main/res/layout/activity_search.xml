@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/search_btn"
+            android:id="@+id/search_btn_searchActivity"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="0dp"
@@ -37,7 +37,7 @@
             app:srcCompat="@drawable/ic_search_white" />
 
         <EditText
-            android:id="@+id/area_et"
+            android:id="@+id/area_et_searchActivity"
             android:layout_width="260dp"
             android:layout_height="43dp"
             android:layout_marginStart="10dp"
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ListView
-                android:id="@+id/List_View"
+                android:id="@+id/List_View_searchActivity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             </ListView>

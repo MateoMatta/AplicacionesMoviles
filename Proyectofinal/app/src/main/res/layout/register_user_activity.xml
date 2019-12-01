@@ -10,7 +10,7 @@
 
 
     <CheckBox
-        android:id="@+id/checkBoxUser"
+        android:id="@+id/checkBoxUser_userRegister"
         android:layout_width="266dp"
         android:layout_height="45dp"
         android:layout_marginStart="68dp"

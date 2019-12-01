@@ -30,7 +30,7 @@
             android:textSize="30dp"></TextView>
 
         <ImageButton
-            android:id="@+id/menu_btn"
+            android:id="@+id/menu_btn_helpActivity"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="17dp"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
-        android:id="@+id/post_et"
+        android:id="@+id/post_et_helpActivity"
         android:layout_width="352dp"
         android:layout_height="301dp"
         android:layout_marginStart="20dp"
@@ -72,7 +72,7 @@
 
 
     <Button
-        android:id="@+id/backPost_btn"
+        android:id="@+id/backPost_btn_helpActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
@@ -94,7 +94,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <TextView
-            android:id="@+id/send_et"
+            android:id="@+id/send_et_helpActivity"
             android:layout_width="260dp"
             android:layout_height="43dp"
             android:layout_marginStart="10dp"

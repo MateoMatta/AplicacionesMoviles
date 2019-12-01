@@ -30,7 +30,7 @@
         </TextView>
 
         <ImageButton
-            android:id="@+id/menu_btn"
+            android:id="@+id/menu_btn_newMessage"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="17dp"
@@ -43,7 +43,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/destino_et"
+        android:id="@+id/destino_et_newMessage"
         android:layout_width="359dp"
         android:layout_height="72dp"
         android:layout_marginStart="24dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
-        android:id="@+id/titulo_et"
+        android:id="@+id/titulo_et_newMessage"
         android:layout_width="356dp"
         android:layout_height="72dp"
         android:layout_marginStart="28dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
-        android:id="@+id/mensaje_et"
+        android:id="@+id/mensaje_et_newMessage"
         android:layout_width="355dp"
         android:layout_height="268dp"
         android:layout_marginStart="28dp"
@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-        android:id="@+id/enviar_btn"
+        android:id="@+id/enviar_btn_newMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="540dp"
@@ -95,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-        android:id="@+id/backPost_btn"
+        android:id="@+id/backPost_btn_newMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"

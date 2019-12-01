@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/search_button"
+            android:id="@+id/search_button_principal"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="0dp"
@@ -39,7 +39,7 @@
             app:srcCompat="@drawable/ic_search_white" />
 
         <TextView
-            android:id="@+id/buscar_edit_text"
+            android:id="@+id/buscar_edit_text_principal"
             android:layout_width="260dp"
             android:layout_height="43dp"
             android:layout_marginStart="10dp"
@@ -52,7 +52,7 @@
         </TextView>
 
         <ImageButton
-            android:id= "@+id/burger_menu_button"
+            android:id= "@+id/burger_menu_button_principal"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="0dp"

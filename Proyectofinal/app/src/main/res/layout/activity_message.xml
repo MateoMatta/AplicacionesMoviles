@@ -7,7 +7,7 @@
     tools:context=".PrincipalActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_button"
+        android:id="@+id/floating_button_questions"
         android:layout_width="75dp"
         android:layout_height="62dp"
         android:layout_marginEnd="16dp"
@@ -39,7 +39,7 @@
 
 
         <TextView
-            android:id="@+id/area_et"
+            android:id="@+id/gg"
             android:layout_width="260dp"
             android:layout_height="43dp"
             android:layout_marginStart="10dp"
@@ -52,6 +52,7 @@
             android:textColorHint="#D5D5D5">
         </TextView>
         <ImageButton
+            android:id="@+id/burger_menu_button_questions"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="0dp"
@@ -76,7 +77,7 @@
             android:layout_height="wrap_content">
 
             <ListView
-                android:id="@+id/List_View"
+                android:id="@+id/List_View_questions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></ListView>
         </ScrollView>

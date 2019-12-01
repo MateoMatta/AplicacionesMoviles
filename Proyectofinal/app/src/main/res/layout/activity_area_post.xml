@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/search_btn"
+            android:id="@+id/search_btn_areaPost"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginStart="0dp"
@@ -37,7 +37,7 @@
             app:srcCompat="@drawable/ic_search_white" />
 
         <TextView
-            android:id="@+id/area_et"
+            android:id="@+id/area_et_areaPost"
             android:layout_width="260dp"
             android:layout_height="43dp"
             android:layout_marginStart="10dp"
@@ -51,6 +51,7 @@
         </TextView>
 
         <ImageButton
+            android:id="@+id/bugermenu_areaPost"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="0dp"
@@ -70,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ListView
-                android:id="@+id/listview_topics"
+                android:id="@+id/listview_topics_areaPost"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             </ListView>
