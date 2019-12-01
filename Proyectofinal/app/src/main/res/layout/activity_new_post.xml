@@ -30,7 +30,7 @@
         </TextView>
 
         <ImageButton
-            android:id="@+id/menu_btn"
+            android:id="@+id/menu_btn_new_post"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="17dp"
@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
-        android:id="@+id/titulo_et"
+        android:id="@+id/titulo_et_new_post"
         android:layout_width="356dp"
         android:layout_height="72dp"
         android:layout_marginStart="28dp"
@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <EditText
-        android:id="@+id/post_et"
+        android:id="@+id/post_et_new_post"
         android:layout_width="355dp"
         android:layout_height="268dp"
         android:layout_marginStart="28dp"
@@ -81,18 +81,18 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-        android:id="@+id/adjunta_btn"
+        android:id="@+id/enviar_btn_new_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="540dp"
         android:layout_marginEnd="52dp"
         android:fontFamily="@font/salsafamilyfont"
-        android:text="Adjuntar Archivos"
+        android:text="Enviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-        android:id="@+id/backPost_btn"
+        android:id="@+id/backPost_btn_new_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"

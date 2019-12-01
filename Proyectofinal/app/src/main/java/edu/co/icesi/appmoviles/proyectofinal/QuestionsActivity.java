@@ -39,20 +39,8 @@ public class QuestionsActivity extends AppCompatActivity {
         db = FirebaseDatabase.getInstance();
 
 
-        //Crear una llave
-        String uid =  UUID.randomUUID().toString();
 
 
-        //
-        //Sacar el texto
-        String text = "uy mano";
-
-
-        QuestionAndAnswer comment = new QuestionAndAnswer(uid, text, "");
-        db.getReference()
-                .child("questions")
-                .child(question.getUid())
-                .setValue(comment);
 
 
 

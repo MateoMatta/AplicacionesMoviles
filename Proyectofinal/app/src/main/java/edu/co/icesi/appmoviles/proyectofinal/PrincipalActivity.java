@@ -123,36 +123,7 @@ public class PrincipalActivity extends AppCompatActivity {
                 Intent showContent = new Intent(getApplicationContext(),
                         BurgerMenu.class);
                 startActivity(showContent);
-      //          fragment = new BurgerMenu();
-
-
-
-  //              ft = getSupportFragmentManager().beginTransaction();
-// Replace the contents of the container with the new fragment
-//                // ft.addToBackStack("sisa");
-// or ft.add(R.id.your_placeholder, new FooFragment());
-// Complete the changes added above
-    //            ft.commit();
-
-                //   ft.show(fragment);
-
             }
-
         });
-
-
-        //if (fragment != null) {
-
-          //  ImageButton imgBtn = fragment.getBackBtn();
-
-            //imgBtn.setOnClickListener(new View.OnClickListener() {
-              //  @Override
-                //public void onClick(View v) {
-                 //   Toast.makeText(v.getContext(), "sisa", Toast.LENGTH_SHORT).show();
-                   // ft.replace(R.id.scroll, fragment);
-                //}
-            //});
-
-    //    }
     }
 }
