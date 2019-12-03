@@ -1,18 +1,11 @@
 package edu.co.icesi.appmoviles.proyectofinal;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import edu.co.icesi.appmoviles.proyectofinal.control.BurgerMenu;
@@ -23,7 +16,7 @@ public class PrincipalActivity extends AppCompatActivity {
     private ImageButton burgerMenuBtn;
 
     private ImageButton calculoBtn;
-    private ImageButton algebraLinealBtn;
+    private ImageButton estadisticaBtn;
     private ImageButton algebraBtn;
     private ImageButton calculoMultivariableBtn;
     private ImageButton geometriaBtn;
@@ -56,9 +49,8 @@ public class PrincipalActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo", "calculo");
+                i.putExtra("tipo", AreaPost.CALCULO);
                 startActivity(i);
-                //PONER ACCION------------------------------------------------------------------------------------------
             }
         });
 
@@ -67,20 +59,18 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo", "algebra");
+                i.putExtra("tipo", AreaPost.ALGEBRA);
                 startActivity(i);
 
-                //PONER ACCION---------------------------------------------
             }
         });
-        algebraLinealBtn = findViewById(R.id.imageButton_lineal);
-        algebraLinealBtn.setOnClickListener(new View.OnClickListener() {
+        estadisticaBtn = findViewById(R.id.imageButton_estadistica);
+        estadisticaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo", "algebraLineal");
+                i.putExtra("tipo", AreaPost.ESTADISTICA);
                 startActivity(i);
-                //PONER ACCION---------------------------------------------
             }
         });
 
@@ -89,9 +79,8 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo", "calculoVarias");
+                i.putExtra("tipo", AreaPost.CALCULO_MULTIVARIABLE);
                 startActivity(i);
-                //PONER ACCION---------------------------------------------
             }
         });
 
@@ -100,9 +89,8 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo", "geometria");
+                i.putExtra("tipo", AreaPost.GEOMETRIA);
                 startActivity(i);
-                //PONER ACCION---------------------------------------------
             }
         });
 
@@ -111,9 +99,8 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(PrincipalActivity.this, AreaPost.class);
-                i.putExtra("tipo", "ecuaciones");
+                i.putExtra("tipo", AreaPost.ECUACIONES_DIFERENCIALES);
                 startActivity(i);
-                //PONER ACCION---------------------------------------------
             }
         });
 

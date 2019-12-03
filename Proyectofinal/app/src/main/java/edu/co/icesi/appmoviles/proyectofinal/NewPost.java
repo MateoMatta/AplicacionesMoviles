@@ -2,6 +2,7 @@ package edu.co.icesi.appmoviles.proyectofinal;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -30,12 +31,24 @@ public class NewPost extends AppCompatActivity {
         setContentView(R.layout.activity_new_post);
 //fgfffff
 
+        String[] areas = {AreaPost.CALCULO, AreaPost.CALCULO_MULTIVARIABLE, AreaPost.ALGEBRA, AreaPost.ESTADISTICA,
+                AreaPost.ECUACIONES_DIFERENCIALES, AreaPost.GEOMETRIA};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item,
+                areas);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
         titulo = findViewById(R.id.titulo_et_new_post);
         db = FirebaseDatabase.getInstance();
 
         texto = findViewById(R.id.post_et_new_post);
 
         atrasBtn = findViewById(R.id.backPost_btn_new_post);
+
+        spinnerNewPost = findViewById(R.id.spinner_new_post);
+
+        spinnerNewPost.setAdapter(adapter);
 
         enviarBtn = findViewById(R.id.enviar_btn_new_post);
         enviarBtn.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +57,7 @@ public class NewPost extends AppCompatActivity {
                 //Crear una llave
                 String uid =  UUID.randomUUID().toString();
 
+                String area = spinnerNewPost.getSelectedItem().toString();
 
                 //
                 //Sacar el texto
@@ -51,9 +65,11 @@ public class NewPost extends AppCompatActivity {
                 String answer = texto.getText().toString();
 
 
-                QuestionAndAnswer comment = new QuestionAndAnswer(uid, theQuestion, "");
+                QuestionAndAnswer comment = new QuestionAndAnswer(uid, theQuestion, answer + "", area);
                 db.getReference()
                         .child("questions")
+                        .child("area")
+                        .child(comment.getArea())
                         .child(comment.getUid())
                         .setValue(comment);
                 //

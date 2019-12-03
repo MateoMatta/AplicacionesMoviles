@@ -92,7 +92,7 @@
                 app:srcCompat="@drawable/geometriaedit" />
 
             <ImageButton
-                android:id="@+id/imageButton_lineal"
+                android:id="@+id/imageButton_estadistica"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="24dp"
