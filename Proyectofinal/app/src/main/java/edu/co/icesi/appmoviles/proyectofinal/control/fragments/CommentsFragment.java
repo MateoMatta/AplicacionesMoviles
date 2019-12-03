@@ -1,4 +1,5 @@
-package appmoviles.com.preclase13.control.fragments;
+
+package edu.co.icesi.appmoviles.proyectofinal.control.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -19,14 +20,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-import appmoviles.com.preclase13.FriendListActivity;
-import appmoviles.com.preclase13.R;
-import appmoviles.com.preclase13.model.entity.Comment;
-import appmoviles.com.preclase13.model.entity.Friend;
-import appmoviles.com.preclase13.model.entity.Photo;
+
+import edu.co.icesi.appmoviles.proyectofinal.R;
+import edu.co.icesi.appmoviles.proyectofinal.model.Comment;
+import edu.co.icesi.appmoviles.proyectofinal.model.QuestionAndAnswer;
+
 
 public class CommentsFragment extends DialogFragment {
 
@@ -35,7 +35,7 @@ public class CommentsFragment extends DialogFragment {
     private ListView commentList;
     private ArrayAdapter<Comment> commentsAdapter;
     private ArrayList<Comment> arrayComments;
-    private Photo photo;
+    private QuestionAndAnswer comentariesito;
     FirebaseDatabase db;
 
     @Override
@@ -48,43 +48,41 @@ public class CommentsFragment extends DialogFragment {
 
         arrayComments = new ArrayList<>();
         commentsAdapter = new ArrayAdapter<>(getActivity(),
-                android.R.layout.simple_list_item_1,
-                arrayComments);
-
+                android.R.layout.simple_list_item_1,arrayComments);
         commentList.setAdapter(commentsAdapter);
 
 
-        commentBtn.setOnClickListener((v) -> {
-            //Crear una llave
-            String uid = db.getReference()
-                    .child("comments")
-                    .child(photo.getId())
-                    .push().getKey();
-            //Sacar el texto
-            String text = commentEt.getText().toString();
 
-            Comment comment = new Comment(uid, text);
-            db.getReference()
-                    .child("comments")
-                    .child(photo.getId())
-                    .child(comment.getUid())
-                    .setValue(comment);
+        commentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Crear una llave
+                String uid = db.getReference()
+                        .child("comments")
+                        .child(comentariesito.getUid())
+                        .push().getKey();
+                //Sacar el texto
+                String text = commentEt.getText().toString();
 
-            if (getActivity() instanceof FriendListActivity) {
-                FriendListActivity activity = (FriendListActivity) getActivity();
-                Friend friend = activity.getFriend();
-                db.getReference().child("notifications").child(friend.getUid()).child(uid).setValue(comment);
+                Comment comment = new Comment(uid, text);
+                db.getReference()
+                        .child("comments")
+                        .child(comentariesito.getUid())
+                        .child(comment.getUid())
+                        .setValue(comment);
+                //  db.getReference().child("notifications").child(.getUid()).child(uid).setValue(comment);
 
+
+
+                CommentsFragment.this.hideSoftKeyboard(v);
             }
-            hideSoftKeyboard(v);
         });
-
-        db.getReference().child("comments").child(photo.getId())
+        db.getReference().child("comments").child(comentariesito.getUid())
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         arrayComments.clear();
-                        for (DataSnapshot child : dataSnapshot.getChildren()) {
+                        for(DataSnapshot child : dataSnapshot.getChildren()){
                             Comment comment = child.getValue(Comment.class);
                             arrayComments.add(comment);
                         }
@@ -108,7 +106,7 @@ public class CommentsFragment extends DialogFragment {
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
-    public void setPhoto(Photo photo) {
-        this.photo = photo;
+    public void setPhoto(QuestionAndAnswer comee) {
+        this.comentariesito = comee;
     }
 }

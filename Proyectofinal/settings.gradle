@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':glide-4.10.0'
 rootProject.name='Proyectofinal'

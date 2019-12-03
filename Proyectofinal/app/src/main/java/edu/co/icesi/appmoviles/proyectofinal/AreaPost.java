@@ -11,47 +11,66 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
+import edu.co.icesi.appmoviles.proyectofinal.control.adapters.CommentAdapter;
+import edu.co.icesi.appmoviles.proyectofinal.model.QuestionAndAnswer;
+
 public class AreaPost extends AppCompatActivity {
 
     private ListView listViewTopics;
-    private ArrayList<String> topicsNames;
+    private ArrayList<QuestionAndAnswer> theQuestions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area_post);
         listViewTopics = findViewById(R.id.listview_topics_areaPost);
-        topicsNames = new ArrayList<>();
+        theQuestions = new ArrayList<>();
         Bundle extras = getIntent().getExtras();
-        String key =extras.getString("tipo ");
-        if(key.equals("algebra")){
+        String key = extras.getString("tipo ");
 
-            //RECORRIDO FIREBASE ALGEBRA
+        if (key != null) {
+            if (key.equals("algebra")) {
 
-        }if(key.equals("algebraLineal")){
+                //RECORRIDO FIREBASE ALGEBRA
 
-            //RECORRIDO FIREBASE ALGEBRA LINEAL
+            }
+            if (key.equals("algebraLineal")) {
 
-        }if(key.equals("calculo")){
+                //RECORRIDO FIREBASE ALGEBRA LINEAL
 
-            //RECORRIDO FIREBASE CALCULO
+            }
+            if (key.equals("calculo")) {
 
-        }if(key.equals("calculoVarias")){
+                //RECORRIDO FIREBASE CALCULO
 
-            //RECORRIDO FIREBASE CALCULO VARIAS
+            }
+            if (key.equals("calculoVarias")) {
 
-        }if(key.equals("ecuaciones")){
+                //RECORRIDO FIREBASE CALCULO VARIAS
 
-            //RECORRIDO FIREBASE ECUACIONES
+            }
+            if (key.equals("ecuaciones")) {
 
-        }if(key.equals("geomettia")){
+                //RECORRIDO FIREBASE ECUACIONES
 
-            //RECORRIDO FIREBASE GEOMETRIA
+            }
+            if (key.equals("geomettia")) {
 
+                //RECORRIDO FIREBASE GEOMETRIA
+
+            }
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.listview_topic_item, topicsNames);
-        listViewTopics.setAdapter(adapter);
+        theQuestions.add(new QuestionAndAnswer("seguro?", "sisa", "s"));
+        theQuestions.add(new QuestionAndAnswer("seguriismo?", "nonas", "x"));
+
+
+        CommentAdapter eladapter = new CommentAdapter();
+
+        eladapter.addQuestionAndAnswer(new QuestionAndAnswer("seguro?", "sisa", "s"));
+        eladapter.addQuestionAndAnswer(new QuestionAndAnswer("seguriismo?", "nonas", "x"));
+
+        listViewTopics.setAdapter(eladapter);
 
         listViewTopics.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
